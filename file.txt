@@ -1,0 +1,10 @@
+function test() {
+test = a = 'asd' // asd
+digit = 5
+/* asdasd
+sdfsf  a = 5
+}
+
+
+
+
