@@ -101,34 +101,12 @@ def parsing(path):
 
                     ignore_error = False
 
-        print(errors)
-
-        save_dictionary_to_csv('identifiers.csv', identifiers)
-        save_dictionary_to_csv('constants.csv', constants)
-        save_dictionary_to_csv('separations.csv', SEPARATION)
-        save_dictionary_to_csv('reserved_words.csv', RESERVED_WORDS)
-        save_list_to_csv('comments.csv', comments)
-        save_list_to_csv('errors.csv', errors)
-
-
-def save_dictionary_to_csv(filename, dictionary):
-    with open(filename, 'w', newline='') as csvfile:
-        w = csv.DictWriter(csvfile, dictionary.keys())
-        w.writeheader()
-        w.writerow(dictionary)
-
-
-def save_list_to_csv(filename, data):
-    with open(filename, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(x for x in data)
-
-
-def save_error_to_csv(filename, data):
-    with open(filename, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        for line, value in data:
-            writer.writerow(line, value)
+        print("identifiers", identifiers)
+        print("constants", constants)
+        print("separations", SEPARATION)
+        print("reserved_words", RESERVED_WORDS)
+        print("comments", comments)
+        print("errors", errors)
 
 
 def add_to_hash_map(hash_map, value):
